@@ -1,5 +1,3 @@
-import {authAPI, ResponseTypeAuth} from "../api/cardsAPI";
-import {Dispatch} from "redux";
 
 const initialSate: initialAppStateType = {
     status: 'idle',

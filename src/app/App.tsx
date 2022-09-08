@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import '../App.css';
 import {Login} from "../auth/Login";
-import {Route,useNavigate, Routes, Navigate} from "react-router-dom";
+import {Route,Routes, Navigate} from "react-router-dom";
 import Register from "../auth/Register";
 import Profile from "../profile/Profile";
 import AccountRecovery from "../auth/AccountRecovery";
@@ -9,7 +9,7 @@ import CheckEmail from "../auth/CheckEmail";
 import CreateNewPassword from "../auth/CreateNewPassword";
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "./store";
-import {getAppAuthMeTC, InitialStateType} from "../auth/auth-reducer";
+import {getAppAuthMeTC} from "../auth/auth-reducer";
 import profile from "../profile/Profile";
 import {Box, CircularProgress} from "@mui/material";
 

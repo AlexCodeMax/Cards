@@ -4,11 +4,10 @@ import {AppRootStateType} from "../app/store";
 import {InitialStateType, LogOutTC} from "../auth/auth-reducer";
 import {ResponseTypeAuth} from "../api/cardsAPI";
 import {useNavigate} from "react-router-dom";
-import {Avatar, IconButton, Paper} from "@mui/material";
-import ChangeNickName from "../auth/ChangeNickName";
+import {Avatar, Paper} from "@mui/material";
+
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import BorderColorIcon from '@mui/icons-material/BorderColor';
 import EditableSpan from "../components/EditableSpan";
 import {changeProfileNameTC} from "./profile-reducer";
 
