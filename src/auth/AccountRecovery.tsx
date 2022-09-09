@@ -10,10 +10,6 @@ import {
     Input,
     InputLabel, Link, Paper,
 } from "@mui/material";
-import {validate} from "./utils/Validate";
-
-
-
 
 const AccountRecovery = () => {
 
@@ -48,7 +44,7 @@ link</a>
         if (isEmailForgotPassword){
             navigate('/checkEmail')
         }
-    },[isEmailForgotPassword])
+    },[isEmailForgotPassword, navigate])
 
 
     return (

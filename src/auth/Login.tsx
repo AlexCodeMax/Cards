@@ -1,20 +1,20 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {useFormik} from "formik";
 import {useDispatch, useSelector} from "react-redux";
 import {InitialStateType, loginTC} from "./auth-reducer";
-import {Navigate, NavLink, useNavigate} from "react-router-dom";
+import {Navigate, NavLink} from "react-router-dom";
 import {AppRootStateType} from "../app/store";
 import {
     Button,
     Checkbox,
-    FilledInput,
+
     FormControl,
     FormControlLabel,
     IconButton,
     Input,
     InputAdornment,
     InputLabel, Link, Paper,
-    TextField, Typography
+    Typography
 } from "@mui/material";
 import {Visibility} from "@mui/icons-material";
 import {validate} from "./utils/Validate";
@@ -26,7 +26,7 @@ import {validate} from "./utils/Validate";
  export const Login = () => {
 
      const dispatch = useDispatch()
-     const {isLoggedIn, isRegister} = useSelector<AppRootStateType, InitialStateType>(state => state.auth)
+     const {isLoggedIn} = useSelector<AppRootStateType, InitialStateType>(state => state.auth)
 
      const formik = useFormik({
          initialValues:{

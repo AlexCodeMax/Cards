@@ -52,7 +52,8 @@ const Profile = () => {
         if (!isLoggedIn){
             navigate('/login')
         }
-    },[isLoggedIn])
+    },[isLoggedIn, navigate])
+    
 const logoutHandler = () => {
         dispatch(LogOutTC() as any)
 }

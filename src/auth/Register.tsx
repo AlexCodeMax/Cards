@@ -16,7 +16,7 @@ const Register = () => {
         if (isRegister){
             navigate('login')
         }
-    },[isRegister])
+    },[isRegister, navigate])
 
     const formik = useFormik({
         initialValues: {

@@ -71,19 +71,17 @@ export const loginTC = (data: LoginParamsType) => (dispatch: Dispatch)=> {
 export const RegisterTC = (data: RegisterParamAC) => (dispatch: Dispatch)=> {
     debugger
     authAPI.register(data)
-        .then(res => {
-            debugger
-           // dispatch(registerAC(true))
+        .then( ( ) => {
+            dispatch(registerAC(true))
         })
         .catch(e => {
-            debugger
             const error = e.response ? e.response.data.error : (e.message+ 'more details in the console')
             console.log(error)
         })
 }
 export const LogOutTC = () => (dispatch: Dispatch)=> {
     authAPI.logAut()
-        .then(res => {
+        .then(( )=> {
             dispatch(logoutAC( false))
         })
         .catch(e => {
@@ -101,7 +99,7 @@ export const getAppAuthMeTC = () => (dispatch: Dispatch) => {
             }
 
         )
-        .catch((error) => {
+        .catch(() => {
             dispatch(loginAC(false))
         })
         .finally(() => {
@@ -111,7 +109,7 @@ export const getAppAuthMeTC = () => (dispatch: Dispatch) => {
 export const forgotGetPasswordTC = (data: ForgotPasswordParamAC) => (dispatch: Dispatch) => {
     debugger
     authAPI.forgotPassword(data)
-        .then(res => {
+        .then(()=> {
             debugger
             dispatch(forgotPasswordAC(false))
         })
