@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import '../App.css';
 import {Login} from "../auth/Login";
 import {Route,Routes, Navigate} from "react-router-dom";
 import Register from "../auth/Register";
@@ -10,7 +9,7 @@ import CreateNewPassword from "../auth/CreateNewPassword";
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "./store";
 import {getAppAuthMeTC} from "../auth/auth-reducer";
-import profile from "../profile/Profile";
+
 import {Box, CircularProgress} from "@mui/material";
 
 
@@ -24,7 +23,7 @@ const dispatch = useDispatch()
   useEffect(() => {
         dispatch(getAppAuthMeTC() as any)
 
-    },[])
+    },[dispatch])
 
 if (!isInitialized){
     return <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
