@@ -102,7 +102,7 @@ export const getAppAuthMeTC = () => (dispatch: Dispatch) => {
 
         )
         .catch((error) => {
-
+            dispatch(loginAC(false))
         })
         .finally(() => {
            dispatch(setAppIsInitializeAC(true))
